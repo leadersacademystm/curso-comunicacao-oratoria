@@ -9,35 +9,35 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #F4F4F4; /* Alabastro */
-      --primary: #0B1F41; /* Azul Oxford */
+      --bg: #1B1B1B; /* Preto */
+      --primary: #F4F4F4; /* Alabastro */
       --accent: #C7A462; /* Ouro Prestígio */
       --accent-2: #b8904a;
-      --text: #333333; /* Carvão */
+      --text: #F4F4F4; /* Alabastro */
       --muted: #888888;
-      --card: #FFFFFF;
+      --card: #292929; /* Cinza Escuro */
     }
     *{box-sizing:border-box;}
     body{margin:0;background:var(--bg);color:var(--text);font-family:'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;line-height:1.5;}
     .wrap{max-width:880px;margin:0 auto;padding:24px;}
-    .card{background:var(--card);border-radius:16px;box-shadow:0 6px 24px rgba(0,0,0,.07);padding:24px;}
+    .card{background:var(--card);border-radius:16px;box-shadow:0 6px 24px rgba(0,0,0,.3);padding:24px;}
     .center{text-align:center;}
     .brand-badge img{height:56px;width:auto;}
-    h1, h2, h3 {font-family: 'Playfair Display', serif;}
-    h1{font-size:clamp(1.8rem, 2.5vw + 1rem, 2.8rem);margin:8px 0 0;color:var(--primary); line-height: 1.2;}
-    p.lead{color:#4a4a4a;margin:.5rem 0 0; font-size: 1.1rem;}
-    .btn{appearance:none;border:0;background:var(--primary);color:#fff;padding:14px 22px;border-radius:12px;font-weight:600;cursor:pointer; font-family: 'Montserrat', sans-serif; font-size: 1rem; transition: transform .2s ease, background-color .2s ease;}
-    .btn:hover{background: #002b5c; transform: translateY(-2px);}
+    h1, h2, h3 {font-family: 'Playfair Display', serif; color: var(--primary);}
+    h1{font-size:clamp(1.8rem, 2.5vw + 1rem, 2.8rem);margin:8px 0 0; line-height: 1.2;}
+    p.lead{color:#d4d4d4;margin:.5rem 0 0; font-size: 1.1rem;}
+    .btn{appearance:none;border:0;background:var(--accent);color:#1B1B1B;padding:14px 22px;border-radius:12px;font-weight:600;cursor:pointer; font-family: 'Montserrat', sans-serif; font-size: 1rem; transition: transform .2s ease, background-color .2s ease;}
+    .btn:hover{background: #b38e4a; transform: translateY(-2px);}
     .btn.ghost{background:transparent;border:2px solid var(--primary);color:var(--primary);}
     .btn-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
     .step{display:none;}
     .step.active{display:block;}
     .q-header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:12px;}
-    .progress{height:8px;background:#e0e0e0;border-radius:999px;overflow:hidden;}
+    .progress{height:8px;background:#444;border-radius:999px;overflow:hidden;}
     .progress > div{height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent-2));transition:width .35s ease;}
     fieldset{border:0;padding:0;margin:0;}
     .options{display:grid;gap:10px;}
-    .opt{display:flex;align-items:center;gap:12px;padding:14px;border:2px solid #eee;background:#fff;border-radius:12px;cursor:pointer;transition:border-color .2s ease,box-shadow .2s ease;}
+    .opt{display:flex;align-items:center;gap:12px;padding:14px;border:2px solid #555;background:#333;border-radius:12px;cursor:pointer;transition:border-color .2s ease,box-shadow .2s ease; color: var(--text);}
     .opt:hover{border-color:var(--accent);}
     .opt input{accent-color:var(--accent);width:18px;height:18px;}
     .muted{color:var(--muted);}
@@ -47,11 +47,11 @@
     .dot:nth-child(2){animation-delay:.15s;}
     .dot:nth-child(3){animation-delay:.3s;}
     @keyframes bounce{0%,80%,100%{transform:scale(.7);opacity:.5;}40%{transform:scale(1);opacity:1;}}
-    .result-title{font-size:1.8rem;color:var(--primary);margin:0;}
-    .result-pill{display:inline-block;background: #f7f3e9;border:1px solid #e7d9b9;color:#5c4c2a;padding:6px 12px;border-radius:999px;font-weight:600;font-size: 0.9rem;}
+    .result-title{font-size:1.8rem;margin:0; color: var(--accent);}
+    .result-pill{display:inline-block;background: #444;border:1px solid #555;color:var(--accent);padding:6px 12px;border-radius:999px;font-weight:600;font-size: 0.9rem;}
     .two-col{display:grid;grid-template-columns:1fr;gap:16px;}
     @media(min-width:760px){.two-col{grid-template-columns:1fr 1fr;}}
-    .list{margin:0;padding-left:20px;line-height: 1.6;}
+    .list{margin:0;padding-left:20px;line-height: 1.6; color: var(--text);}
     footer{padding:28px 0;text-align:center;color:var(--muted);}
     footer img{height:32px;opacity:.9;}
   </style>
@@ -106,7 +106,7 @@
         </div>
         <div style="height:24px"></div>
         <div class="two-col">
-          <div class="card" style="box-shadow:none;border:1px solid #eee">
+          <div class="card" style="box-shadow:none;border:1px solid #555">
             <h3 style="margin-top:0;color:var(--primary)">Os 5 Perfis de Comunicador</h3>
             <ul class="list">
               <li><strong>Vendedor (A)</strong>: persuasivo, focado em resultados.</li>
@@ -116,7 +116,7 @@
               <li><strong>Autoridade (E)</strong>: técnico, respeitado, confiável.</li>
             </ul>
           </div>
-          <div class="card" style="box-shadow:none;border:1px solid #eee">
+          <div class="card" style="box-shadow:none;border:1px solid #555">
             <h3 style="margin-top:0;color:var(--primary)">Áreas de Desenvolvimento</h3>
             <ul class="list">
               <li><strong>Vendedor</strong>: pode parecer interesseiro.</li>
@@ -128,8 +128,8 @@
           </div>
         </div>
         <div style="height:16px"></div>
-        <div class="card" style="box-shadow:none;border:1px dashed #e7d9b9;background:#fcfaf5">
-          <h3 style="margin-top:0;color:#5c4c2a">Espelho de Reflexão Pessoal</h3>
+        <div class="card" style="box-shadow:none;border:1px dashed #555;background:#333">
+          <h3 style="margin-top:0;color:var(--accent)">Espelho de Reflexão Pessoal</h3>
           <p class="muted" style="margin-top:-10px; font-size: 0.9rem;">Anote em sua apostila para aprofundar.</p>
           <ul class="list">
             <li>Perfil predominante (letra + título): ______</li>
